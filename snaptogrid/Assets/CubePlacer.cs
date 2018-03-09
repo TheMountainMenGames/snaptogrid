@@ -3,10 +3,10 @@
 public class CubePlacer : MonoBehaviour
 {
     private Grid grid;
-    private GameObject Cube;
+    private Transform Cube;
     public Material Opaque;
-    public Material standaard; 
-
+    public Material standaard;
+    public Transform house;
 
     private void Awake()
     {
@@ -67,8 +67,8 @@ public class CubePlacer : MonoBehaviour
 
     private void GetNewCube()
     {
-        Cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-       
+        //Cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        Cube = Instantiate(house, new Vector3(10f, 10f, 10f), Quaternion.identity); 
 
         /*Renderer rend = Cube.GetComponent<Renderer>();
         rend.material =*/
