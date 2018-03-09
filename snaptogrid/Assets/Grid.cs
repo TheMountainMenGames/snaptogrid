@@ -20,6 +20,8 @@ public class Grid : MonoBehaviour
 
         result += transform.position;
 
+        
+
         return result;
     }
 
